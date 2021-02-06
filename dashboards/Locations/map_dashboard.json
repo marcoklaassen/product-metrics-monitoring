@@ -82,7 +82,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (location) (application_car_total)",
+          "expr": "sum by (location) (application_click_klaassen_ProductMetricsService_hardware_total)",
           "interval": "",
           "legendFormat": "{{location}}",
           "queryType": "randomWalk",

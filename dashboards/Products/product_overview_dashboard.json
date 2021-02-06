@@ -67,7 +67,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (product) (application_car_total)",
+          "expr": "sum by (product) (application_click_klaassen_ProductMetricsService_hardware_total)",
           "format": "time_series",
           "instant": false,
           "interval": "",
