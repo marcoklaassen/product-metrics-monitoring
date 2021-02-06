@@ -1,0 +1,44 @@
+version: '3'
+services:
+  grafana-local-dev:
+    #login admin:admin
+    image: grafana/grafana
+    container_name: grafana-local-dev
+    user: "1000"
+    environment:
+      PROMETHEUS_URL: http://prometheus:9090
+    volumes:
+      - ../dashboards:/etc/grafana/provisioning/dashboards
+      - ../datasources:/etc/grafana/provisioning/datasources
+    ports:
+      - 3000:3000
+    networks:
+      - docker-network
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus-config:/etc/prometheus
+    command:
+      - '--storage.tsdb.retention.time=5d'
+      - '--config.file=/etc/prometheus/prometheus.yaml'
+      - '--storage.tsdb.path=/prometheus'
+    ports:
+      - 9090:9090
+    networks:
+      - docker-network
+  product-metrics:
+    image: klaassen/quarkus-product-metrics
+    container_name: product-metrics
+    environment:
+      PRODUCTS: iPhone,iPad,MacBook,AirPod,AppleTV,iMac
+      LOCATIONS: Munich,Berlin,Hamburg
+      METRIC_NAME: hardware
+      INCREASE_MIN: 0
+      INCREASE_MAX: 3
+    ports:
+      - 8080:8080
+    networks:
+      - docker-network
+networks:
+  docker-network:
