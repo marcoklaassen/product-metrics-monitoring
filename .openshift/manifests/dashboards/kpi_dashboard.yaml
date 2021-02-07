@@ -28,7 +28,7 @@ spec:
       "links": [],
       "panels": [
         {
-          "datasource": "My Prometheus Datasource",
+          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "custom": {},

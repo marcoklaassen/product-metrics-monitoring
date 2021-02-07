@@ -32,7 +32,7 @@ spec:
           "bars": true,
           "dashLength": 10,
           "dashes": false,
-          "datasource": "My Prometheus Datasource",
+          "datasource": null,
           "fieldConfig": {
             "defaults": {
               "custom": {
