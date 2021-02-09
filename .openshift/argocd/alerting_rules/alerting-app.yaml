@@ -12,7 +12,7 @@ spec:
   source:
     path: .openshift/manifests/alerting
     repoURL: https://github.com/marcoklaassen/product-metrics-monitoring.git
-    targetRevision: main
+    targetRevision: feature/alerting
   syncPolicy:
     automated:
       prune: true
