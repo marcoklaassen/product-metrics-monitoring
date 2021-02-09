@@ -12,7 +12,7 @@ spec:
   source:
     path: .openshift/manifests/dashboards
     repoURL: https://github.com/marcoklaassen/product-metrics-monitoring.git
-    targetRevision: main
+    targetRevision: demo/step-4
   syncPolicy:
     automated:
       prune: true
