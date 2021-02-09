@@ -6,5 +6,4 @@ namespace: product-metrics-infra
 resources:
   - namespace.yaml
   - kpi_dashboard.yaml
-  - map_dashboard.yaml
   - product_overview.yaml

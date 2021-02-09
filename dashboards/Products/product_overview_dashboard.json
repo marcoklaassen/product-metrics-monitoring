@@ -16,15 +16,18 @@
   "editable": true,
   "gnetId": 12853,
   "graphTooltip": 0,
-  "id": 16,
-  "iteration": 1612894228876,
+  "iteration": 1612896007566,
   "links": [],
   "panels": [
     {
       "cacheTimeout": null,
       "colorBackground": true,
       "colorValue": false,
-      "colors": ["#d44a3a", "#37872D", "#FADE2A"],
+      "colors": [
+        "#d44a3a",
+        "#37872D",
+        "#FADE2A"
+      ],
       "datasource": null,
       "fieldConfig": {
         "defaults": {
@@ -82,7 +85,7 @@
         "ymax": null,
         "ymin": null
       },
-      "tableColumn": "up{container=\"backend\", endpoint=\"http\", instance=\"10.129.3.229:8080\", job=\"backend\", namespace=\"product-metrics-prod\", pod=\"backend-c946b885c-2zg5m\", prometheus=\"openshift-user-workload-monitoring/user-workload\", service=\"backend\"}",
+      "tableColumn": "",
       "targets": [
         {
           "expr": "up{job=\"$serviceID\", pod=\"$pod\"}",
@@ -115,7 +118,11 @@
       "cacheTimeout": null,
       "colorBackground": false,
       "colorValue": false,
-      "colors": ["#299c46", "rgba(237, 129, 40, 0.89)", "#d44a3a"],
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
       "datasource": null,
       "description": " base_jvm_uptime_seconds Displays the uptime of the JVM in milliseconds.",
       "fieldConfig": {
@@ -175,7 +182,7 @@
         "ymax": null,
         "ymin": null
       },
-      "tableColumn": "base_jvm_uptime_seconds{container=\"backend\", endpoint=\"http\", instance=\"10.129.3.229:8080\", job=\"backend\", namespace=\"product-metrics-prod\", pod=\"backend-c946b885c-2zg5m\", prometheus=\"openshift-user-workload-monitoring/user-workload\", service=\"backend\"}",
+      "tableColumn": "",
       "targets": [
         {
           "expr": "base_jvm_uptime_seconds{pod=\"$pod\"}",
@@ -238,8 +245,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.1",
+      "pluginVersion": "7.4.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -337,7 +347,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.1.1",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -478,8 +488,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.1",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -578,8 +591,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.1",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -691,8 +707,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.1",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -795,8 +814,11 @@
       "linewidth": 1,
       "links": [],
       "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
       "percentage": false,
-      "pluginVersion": "7.1.1",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -894,7 +916,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.1.1",
+      "pluginVersion": "7.4.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -995,10 +1017,204 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 10,
+        "x": 0,
+        "y": 17
+      },
+      "hiddenSeries": false,
+      "id": 35,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.0",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum by (product) (application_click_klaassen_ProductMetricsService_hardware_rate_per_second)",
+          "interval": "",
+          "legendFormat": "{{product}}",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Production Rate",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:151",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:152",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 9,
+        "x": 10,
+        "y": 17
+      },
+      "hiddenSeries": false,
+      "id": 37,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.4.0",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum by (product) (application_click_klaassen_ProductMetricsService_hardware_total)",
+          "interval": "",
+          "legendFormat": "{{product}}",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "Production Counter",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:317",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:318",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     }
   ],
   "refresh": "",
-  "schemaVersion": 26,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -1006,12 +1222,15 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "product-metrics-prod",
-          "value": "product-metrics-prod"
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": null,
         "definition": "label_values(kube_pod_info{cluster=\"$cluster\"}, namespace)",
+        "description": null,
+        "error": null,
         "hide": 0,
         "includeAll": false,
         "label": null,
@@ -1032,12 +1251,15 @@
       {
         "allValue": null,
         "current": {
+          "isNone": true,
           "selected": false,
-          "text": "backend",
-          "value": "backend"
+          "text": "None",
+          "value": ""
         },
         "datasource": null,
         "definition": "label_values(base_cpu_systemLoadAverage{namespace=\"$namespace\"}, job)",
+        "description": null,
+        "error": null,
         "hide": 0,
         "includeAll": false,
         "label": "ServiceID",
@@ -1058,12 +1280,15 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "backend-c946b885c-2zg5m",
-          "value": "backend-c946b885c-2zg5m"
+          "isNone": true,
+          "selected": false,
+          "text": "None",
+          "value": ""
         },
         "datasource": null,
         "definition": "label_values(base_cpu_systemLoadAverage{job=\"$serviceID\"}, pod)",
+        "description": null,
+        "error": null,
         "hide": 0,
         "includeAll": false,
         "label": null,
@@ -1091,6 +1316,8 @@
         },
         "datasource": null,
         "definition": "label_values(kube_pod_info, cluster)",
+        "description": null,
+        "error": null,
         "hide": 2,
         "includeAll": false,
         "label": null,
@@ -1126,10 +1353,20 @@
       "2h",
       "1d"
     ],
-    "time_options": ["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"]
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
   },
   "timezone": "",
   "title": "MicroProfile Metrics Endpoint Monitoring",
   "uid": "TkcxbEtWz",
-  "version": 4
+  "version": 2
 }
