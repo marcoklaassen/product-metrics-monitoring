@@ -38,66 +38,6 @@ spec:
               "mappings": [],
               "thresholds": {
                 "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "dark-red",
-                    "value": null
-                  },
-                  {
-                    "color": "green",
-                    "value": 0.0001
-                  }
-                ]
-              }
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 0
-          },
-          "id": 4,
-          "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
-              "fields": "",
-              "values": false
-            },
-            "text": {},
-            "textMode": "auto"
-          },
-          "pluginVersion": "7.4.0",
-          "targets": [
-            {
-              "expr": "application_click_klaassen_ProductMetricsService_availability",
-              "interval": "",
-              "legendFormat": "",
-              "queryType": "randomWalk",
-              "refId": "A"
-            }
-          ],
-          "title": "Availability",
-          "type": "stat"
-        },
-        {
-          "datasource": null,
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "custom": {},
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
                 "steps": []
               }
             },
@@ -107,7 +47,7 @@ spec:
             "h": 9,
             "w": 12,
             "x": 0,
-            "y": 8
+            "y": 0
           },
           "id": 2,
           "options": {
@@ -156,5 +96,5 @@ spec:
       "timezone": "",
       "title": "Location KPI Dashboard",
       "uid": "x-6GYw0Gz",
-      "version": 3
+      "version": 1
     }
