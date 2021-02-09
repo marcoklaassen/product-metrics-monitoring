@@ -12,7 +12,7 @@ spec:
             message: Products App is generating enugh products
           expr: >-
             sum(application_click_klaassen_ProductMetricsService_hardware_rate_per_second{container="backend",
-            namespace="product-metrics-prod"}) < 1
+            namespace="product-metrics-prod"}) < 1.5
           for: 1m
           labels:
             app: product-metrics
