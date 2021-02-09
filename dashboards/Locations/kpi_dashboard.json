@@ -18,7 +18,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": null,
+      "datasource": "My Prometheus Datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -78,7 +78,7 @@
       "type": "stat"
     },
     {
-      "datasource": null,
+      "datasource": "My Prometheus Datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -88,24 +88,7 @@
           "mappings": [],
           "thresholds": {
             "mode": "absolute",
-            "steps": [
-              {
-                "color": "red",
-                "value": null
-              },
-              {
-                "color": "orange",
-                "value": 100
-              },
-              {
-                "color": "yellow",
-                "value": 1000
-              },
-              {
-                "color": "green",
-                "value": 10000
-              }
-            ]
+            "steps": []
           }
         },
         "overrides": []
@@ -163,5 +146,5 @@
   "timezone": "",
   "title": "Location KPI Dashboard",
   "uid": "x-6GYw0Gz",
-  "version": 1
+  "version": 3
 }

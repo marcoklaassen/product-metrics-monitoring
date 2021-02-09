@@ -16,7 +16,7 @@
   "editable": true,
   "gnetId": 12853,
   "graphTooltip": 0,
-  "iteration": 1612896007566,
+  "iteration": 1612900829830,
   "links": [],
   "panels": [
     {
@@ -1023,7 +1023,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "My Prometheus Datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1121,7 +1121,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "My Prometheus Datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1172,7 +1172,9 @@
         }
       ],
       "thresholds": [],
+      "timeFrom": null,
       "timeRegions": [],
+      "timeShift": null,
       "title": "Production Counter",
       "tooltip": {
         "shared": true,
@@ -1368,5 +1370,5 @@
   "timezone": "",
   "title": "MicroProfile Metrics Endpoint Monitoring",
   "uid": "TkcxbEtWz",
-  "version": 2
+  "version": 4
 }
