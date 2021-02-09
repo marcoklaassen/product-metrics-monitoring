@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: prod-products-threshold
+  namespace: product-metrics-prod
+spec:
+  groups:
+    - name: ProductMetricsDemo
+      rules:
+        - alert: NotGeneratingEnoughProducts
+          annotations:
+            message: There are not enugh products generated in production
+          expr: >-
+            sum(application_click_klaassen_ProductMetricsService_hardware_rate_per_second{container="backend",
+            namespace="product-metrics-prod"}) < 1
+          for: 1m
+          labels:
+            app: product-metrics
+            severity: warning
