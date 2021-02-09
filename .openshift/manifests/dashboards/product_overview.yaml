@@ -353,7 +353,7 @@ spec:
           "pluginVersion": "7.1.1",
           "targets": [
             {
-              "expr": "application_click_klaassen_ProductMetricsService_availability{pod=\"$pod\"}",
+              "expr": "max(application_click_klaassen_ProductMetricsService_availability)",
               "interval": "",
               "legendFormat": "",
               "queryType": "randomWalk",
